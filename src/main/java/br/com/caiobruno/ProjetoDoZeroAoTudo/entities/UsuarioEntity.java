@@ -1,6 +1,8 @@
 package br.com.caiobruno.ProjetoDoZeroAoTudo.entities;
 
+import br.com.caiobruno.ProjetoDoZeroAoTudo.dto.UsuarioDTO;
 import jakarta.persistence.*;
+import org.springframework.beans.BeanUtils;
 
 import java.util.Objects;
 
@@ -29,6 +31,10 @@ public class UsuarioEntity {
     }
 
     public UsuarioEntity() {
+    }
+
+    public UsuarioEntity (UsuarioDTO usuarioDTO){
+        BeanUtils.copyProperties(usuarioDTO, this);
     }
 
     public Long getId() {
