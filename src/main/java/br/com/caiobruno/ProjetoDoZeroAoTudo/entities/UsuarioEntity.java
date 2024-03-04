@@ -33,6 +33,14 @@ public class UsuarioEntity {
     public UsuarioEntity() {
     }
 
+    public UsuarioEntity(UsuarioEntity entity) {
+
+        this.nome =entity.getNome();
+        this.login = entity.getLogin();
+        this.senha = entity.getSenha();
+        this.email = entity.getEmail();
+    }
+
     public UsuarioEntity (UsuarioDTO usuarioDTO){
         BeanUtils.copyProperties(usuarioDTO, this);
     }

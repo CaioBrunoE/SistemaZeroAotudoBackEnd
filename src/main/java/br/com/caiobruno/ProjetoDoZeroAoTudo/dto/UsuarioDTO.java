@@ -1,7 +1,6 @@
 package br.com.caiobruno.ProjetoDoZeroAoTudo.dto;
 
 import br.com.caiobruno.ProjetoDoZeroAoTudo.entities.UsuarioEntity;
-import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.springframework.beans.BeanUtils;
 
 public class UsuarioDTO {
